@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Set Once
+Comment=ALG Set Once Service
+Exec=sh -c ~/.config/autostart/alg_set_once.sh
+StartupNotify=false
+Terminal=false
+Hidden=false
