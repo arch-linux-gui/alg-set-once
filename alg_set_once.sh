@@ -1,10 +1,11 @@
 #!/bin/sh
 
+# Copy calamares.desktop to Desktop
+cp /usr/share/applications/calamares.desktop /home/liveuser/Desktop/calamares.desktop
+
 # For setting calamares.desktop as trusted in xfce
 for f in ~/Desktop/calamares.desktop; do chmod +x "$f"; gio set -t string "$f" metadata::xfce-exe-checksum "$(sha256sum "$f" | awk '{print $1}')"; done
 
-# Copy calamares.desktop to Desktop
-cp /usr/share/applications/calamares.desktop /home/liveuser/Desktop/calamares.desktop
 # Make calamares.desktop executable
 chmod +x ~/Desktop/calamares.desktop
 
